@@ -1,0 +1,14 @@
+    <nav class="bg-blue-600 p-4 text-white flex justify-between items-center">
+        <div class="flex items-center">
+          <img src="../../../assets/asifvisas-logo.png" alt="AsifVisas Logo" class="h-10 mr-3">
+          <span class="text-xl font-bold">AsifVisas</span>
+        </div>
+        <button class="block md:hidden" (click)="toggleMenu()">
+          <span class="material-icons">menu</span>
+        </button>
+        <div [ngClass]="{'hidden': !menuOpen, 'block': menuOpen}" class="md:flex md:items-center md:space-x-4">
+          <a routerLink="/about-me" class="block md:inline-block px-3">About Me</a>
+          <a routerLink="/services" class="block md:inline-block px-3">Services</a>
+          <a routerLink="/contact-us" class="block md:inline-block px-3">Contact Us</a>
+        </div>
+      </nav>
