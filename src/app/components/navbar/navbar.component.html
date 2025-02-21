@@ -6,9 +6,9 @@
         <button class="block md:hidden" (click)="toggleMenu()">
           <span class="material-icons">menu</span>
         </button>
-        <div [ngClass]="{'hidden': !menuOpen, 'block': menuOpen}" class="md:flex md:items-center md:space-x-4">
-          <a routerLink="/about-me" class="block md:inline-block px-3">About Me</a>
-          <a routerLink="/services" class="block md:inline-block px-3">Services</a>
-          <a routerLink="/contact-us" class="block md:inline-block px-3">Contact Us</a>
-        </div>
       </nav>
+<div *ngIf="menuOpen" class="navbar bg-blue-500 text-white text-center md:hidden p-4 space-y-2">
+  <a routerLink="/about-me" class="block">About Me</a>
+  <a routerLink="/services" class="block">Services</a>
+  <a routerLink="/contact-us" class="block">Contact Us</a>
+</div>
